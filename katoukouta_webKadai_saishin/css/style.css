@@ -1,0 +1,762 @@
+@charset "UTF-8";
+
+/* ===リセット・ベース=== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Kaisei Tokumin", serif;
+    font-weight: 500;
+    font-style: normal;
+    max-width: 100%;
+}
+
+img {
+    object-fit: contain;
+}
+
+/* ===ヘッダー=== */
+header {
+    width: 100%;
+    position: relative;
+    display: block;
+}
+
+.header-bg {
+    position: relative;
+    width: 100%;
+    height: 627px;
+    background-color: #f7ad5e;
+    overflow: hidden;
+    /* はみ出た要素を隠す */
+}
+
+/* 背景画像 */
+.bg-main {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+}
+
+.bg-dot {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ヘッダー内アイテム */
+.bg-hokkaido {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    max-width: 80%;
+    height: 200px;
+    object-fit: contain;
+    display: block;
+    z-index: 1;
+}
+
+.bg-gurume {
+    position: absolute;
+    top: calc(50% - 82px);
+    width: 100%;
+    height: 215px;
+    z-index: 1;
+}
+
+.bg-umagurume {
+    position: absolute;
+    display: flex;
+    top: 165px;
+    left: 0;
+    width: 100%;
+    height: 147px;
+    z-index: 1;
+}
+
+/* エリアナビ */
+.header-bg .area-nav {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3%;
+    position: absolute;
+    top: 490px;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+}
+
+.area-nav__item {
+    display: flex;
+    flex-direction: column;
+    width: 92px;
+    align-items: flex-start;
+    gap: 10px;
+    position: relative;
+}
+
+.area-nav__img {
+    width: 85px;
+    height: 69px;
+    position: relative;
+    aspect-ratio: 1.33;
+    object-fit: cover;
+}
+
+/* エリアラベル（文字画像）一覧 */
+.area-label-list {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14%;
+    position: absolute;
+    top: 567px;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+}
+
+.area-label-img {
+    position: relative;
+    width: 46.54px;
+    height: 21.89px;
+}
+
+/* エリア選択バッジ */
+.area-select-badge {
+    position: absolute;
+    top: 455px;
+    left: 180px;
+    width: 185px;
+    height: 25px;
+    z-index: 2;
+}
+
+/*===文字の高さ設定===*/
+.moji {
+        font-size: 97%;
+        height: 110px;
+    }
+
+/* ===ヒーローテキスト（メインコピー）=== */
+.hero-text .text1 {
+    font-family: "Kaisei Tokumin", serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: clamp(1.8rem, 5vw, 3.3rem);
+    text-align: center;
+    margin-top: 5rem;
+}
+
+
+.hero-text .text2 {
+    font-family: "Kaisei Tokumin", serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: clamp(1rem, 3vw, 2rem);
+    margin-top: 2%;
+    text-align: center;
+}
+
+.hero-text .text3 {
+    font-family: "Kaisei Tokumin", serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: clamp(1rem, 3vw, 1.9rem);
+    text-align: center;
+    margin-top: 1%;
+}
+
+.hero-text .text4 {
+    font-family: "Kaisei Tokumin", serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: clamp(0.65rem, 2vw, 1.25rem);
+    text-align: center;
+    margin-top: 1%;
+    margin-bottom: 2rem;
+}
+
+/* テキストアクセントカラー */
+.text-accent {
+    font-family: "Kaisei Tokumin", serif;
+    font-weight: 700;
+    font-style: normal;
+    color: #f88;
+}
+
+.text-accent--red {
+    color: #ff6464;
+}
+
+/* ===エリアセクション（道央・道南・道北・道東）=== */
+.area-section {
+    position: relative;
+}
+
+img.area-background {
+    position: absolute;
+    width: 100%;
+    justify-content: center;
+}
+
+.area-section__title {
+    font-family: "Kaisei Tokumin", serif;
+    font-weight: 500;
+    font-style: normal;
+    text-align: center;
+    letter-spacing: 0.2rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    padding-top: 1rem;
+}
+
+/* ===ショップグリッド（2カラム店舗紹介）=== */
+
+/* セパレーター */
+.shop-grid__divider {
+    position: relative;
+    width: 100%;
+    height: 2rem;
+    background-color: #FFFBF6;
+}
+
+.shop-grid__divider::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 1px;
+    height: 100%;
+    background-color: #ccc;
+}
+
+/* グリッド本体 */
+.shop-grid {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    align-items: flex-start;
+    justify-content: center;
+    position: relative;
+    left: 0;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #FFFBF6;
+    border-bottom: 1px solid #ccc;
+}
+
+/* 中央縦線 */
+.shop-grid::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 1px;
+    height: 100%;
+    background-color: #ccc;
+    z-index: 1;
+}
+
+/* ===スマホ用 shop-item=== */
+.shop-item {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 0;
+    align-items: flex-start;
+    justify-content: center;
+    width: clamp(130px, 44vw, 175px);
+    padding-bottom: 0.8rem;
+}
+
+/* 偶数番目（右側）の後に全幅の横線 */
+.shop-item:nth-child(even)::after {
+    content: '';
+    display: block;
+    width: 200vw;
+    height: 1px;
+    background-color: #ccc;
+    margin-left: -50vw;
+    margin-top: 0.8rem;
+}
+
+.shop-item .shop-img {
+    width: 100%;
+}
+
+.shop-item .shop-card {
+    width: 100%;
+    position: relative;
+    font-size: 0.7rem;
+}
+
+.shop-item .shop-map {
+    width: 100%;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.shop-item iframe {
+    width: 100%;
+    height: clamp(130px, 44vw, 175px);
+}
+
+/* メイン画像（左・右） */
+.shop-img {
+    position: relative;
+    top: 0%;
+    left: 0%;
+}
+
+/* ショップカード（名前・キャッチ・説明・地図の枠） */
+.shop-card--left,
+.shop-card--right {
+    width: 175px;
+    position: relative;
+}
+
+.shop-card__bg {
+    display: block;
+    width: 100%;
+}
+
+/* カード内：店名 */
+.shop-card__name {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+    z-index: 1;
+    /* 背景画像より前面に */
+}
+
+.shop-card__name p {
+    font-size: clamp(13px, 3.5vw, 20px);
+    color: #FFF;
+    word-break: break-all;
+    overflow-wrap: break-word;
+}
+
+.shop-card__catchphrase {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 175px;
+    text-align: center;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.shop-card__catchphrase p {
+    font-size: clamp(9px, 3vw, 14px);
+    width: 100%;
+    word-break: break-all;
+    overflow-wrap: break-word;
+}
+
+/* 地図ラベル */
+.shop-map--left,
+.shop-map--right {
+    width: 175px;
+    font-size: 2rem;
+    text-align: center;
+}
+
+/* レスポンシブ調整 */
+@media (max-width: 430px) and (min-width: 410px) {
+    .shop-grid {
+        gap: 0.5rem 2rem;
+    }
+}
+
+@media (width: 390px) {
+    .shop-grid {
+        gap: 0.5rem 1rem;
+    }
+}
+
+/* 小さい画面向け追加調整 */
+@media (max-width: 360px) {
+    .shop-grid {
+        gap: 0.3rem 0.5rem;
+    }
+
+    .shop-card__name p {
+        font-size: 11px;
+    }
+
+    .shop-card__catchphrase p {
+        font-size: 8px;
+    }
+}
+
+div.padding {
+    background-color: #FFF;
+    height: 10%;
+}
+
+/* ===フッター=== */
+footer {
+    margin-top: 25%;
+    background-color: #FFBE7E;
+    width: 100%;
+    height: 420px;
+    text-align: center;
+}
+
+.site {
+    position: inherit;
+    font-size: 200%;
+    text-align: left;
+    width: 80%;
+    margin-left: 10%;
+    padding-top: 5%;
+}
+
+.hp-tag {
+    display: inline-flex;
+    letter-spacing: 0.2rem;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    margin-top: 5%;
+    text-indent: 0.3rem;
+    gap: 2.5%;
+}
+
+.hp-tag a {
+    text-decoration: none;
+    color: #FFF;
+}
+
+.hp-tag p {
+    color: #FFF;
+}
+
+/* ===エリア選択に戻るボタン（スマホ・PC共通ベース）=== */
+.back-to-area {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: #555;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease, background-color 0.2s ease;
+}
+
+.back-to-area.is-visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.back-to-area:hover {
+    background-color: #F7AD5E;
+}
+
+.back-to-area__icon {
+    font-size: 1.4rem;
+    line-height: 1;
+}
+
+.back-to-area__label {
+    font-size: 0.45rem;
+    line-height: 1.2;
+    text-align: center;
+    font-family: "Kaisei Tokumin", serif;
+}
+
+/* PC用背景アイテム（スマホでは非表示） */
+.background-item-pc {
+    display: none;
+}
+
+/* ===PC用レイアウト (768px以上)=== */
+@media (min-width: 768px) {
+
+    .header-bg {
+        height: 1628px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        padding-bottom: 80px;
+    }
+
+    .bg-main {
+        width: 100%;
+        height: 100%;
+    }
+
+    .bg-dot {
+        width: 100%;
+        height: 100%;
+    }
+
+    .bg-gurume,
+    .bg-umagurume {
+        display: none;
+    }
+
+    .area-select-badge {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 300px;
+        height: 30px;
+        bottom: 155px;
+        top: 63rem;
+    }
+
+    .bg-hokkaido {
+        position: absolute;
+        top: 80px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: auto;
+        max-width: 80%;
+        height: 400px;
+        object-fit: contain;
+        display: block;
+        z-index: 1;
+    }
+
+    .area-nav__img {
+        width: clamp(5rem, 10vw, 12rem);
+        height: clamp(5rem, 10vw, 12rem);
+    }
+
+    /* PC: area-navをflexboxで自然に下部配置 */
+    .header-bg .area-nav {
+        gap: clamp(2%, 5vw, 11%);
+        position: relative;
+        top: auto;
+        left: auto;
+        width: 100%;
+        height: auto;
+    }
+
+    .area-nav__item {
+        width: clamp(80px, 10vw, 180px);
+        height: 100%;
+    }
+
+    /* PC: area-label-listもrelativeで直後に配置 */
+    .area-label-list {
+        gap: clamp(2rem, 12vw, 20%);
+        position: relative;
+        top: auto;
+        left: auto;
+        width: 100%;
+        margin-top: 16px;
+    }
+
+    .hp-tag a{
+        font-size: 1.4rem;
+    }
+    /* エリアタイトル */
+    .area-section__title {
+        margin-top: 15rem;
+        font-size: 4rem;
+    }
+
+    .shop-item:nth-child(even)::after {
+        display: none;
+    }
+
+    /* shop-grid 4列 */
+    .shop-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0;
+        align-items: start;
+        border-bottom: none;
+        padding-bottom: 2rem;
+    }
+
+    .shop-grid::after {
+        display: none;
+    }
+
+    .shop-item {
+        display: block;
+        width: 100%;
+        padding: 0 1rem;
+    }
+
+    .shop-item+.shop-item {
+        border-left: 1px solid #ccc;
+    }
+
+    .shop-item .shop-img {
+        width: 100%;
+        height: auto;
+    }
+
+    .shop-item .shop-card {
+        width: 100%;
+    }
+
+    .shop-item .shop-map {
+        width: 100%;
+        text-align: center;
+    }
+
+    .shop-item .shop-map p {
+        font-size: 2rem;
+    }
+
+    .shop-item iframe {
+        width: 100%;
+        height: 250px;
+    }
+
+    /* PC: 背景画像は非表示にしてCSSで色付け */
+    .shop-card__bg {
+        display: none;
+    }
+
+    .shop-card__name,
+    .shop-card__catchphrase {
+        position: static;
+        transform: none;
+        width: 100%;
+    }
+
+    .shop-card {
+        text-align: center;
+    }
+
+    .shop-card__name {
+        background-color: #F7AD5E;
+        min-height: 85px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100px;
+    }
+    .shop-item .shop-card{
+        font-size: 1.2rem;
+    }
+
+    .shop-card__name p {
+        color: #FFF;
+        font-size: 2rem;
+    }
+
+    .shop-card__catchphrase {
+        background-color: #FFF;
+        min-height: 85px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 2%;
+        max-width: none;
+        overflow: visible;
+    }
+
+    .shop-card__catchphrase p {
+        width: 100%;
+        font-size: clamp(10px, 2vw, 25px);
+        word-break: normal;
+        overflow-wrap: normal;
+    }
+
+    .shop-card__name p {
+        color: #FFF;
+        font-size: 2rem;
+        word-break: normal;
+        overflow-wrap: normal;
+    }
+
+    /* ボタン PC用サイズ */
+    .back-to-area {
+        width: 100px;
+        height: 100px;
+    }
+
+    .back-to-area__icon {
+        font-size: 2rem;
+    }
+
+    .back-to-area__label {
+        font-size: 0.6rem;
+    }
+
+    .shop-grid__divider::after {
+        display: none;
+    }
+
+    /* PC用背景アイテム */
+    .background-item-pc {
+        display: flex;
+        width: 100%;
+    }
+
+    .background-item-pc img {
+        position: absolute;
+        left: 52%;
+        transform: translateX(-50%);
+        width: auto;
+        max-width: 80%;
+        height: 450px;
+        object-fit: contain;
+        top: 20%;
+    }
+
+    .moji {
+        font-size: 90%;
+        height: 150px;
+    }
+}
+@media (min-width: 500px) and (max-width: 767px) {
+    /* 既存の記述はそのままで、以下を追加 */
+
+    /* スマホ用の横線を無効化 */
+    .shop-item:nth-child(even)::after {
+        display: none;
+    }
+
+    /* 4の倍数ごとに横線を引く（行の区切り） */
+    .shop-item:nth-child(4n)::after,
+    .shop-item:last-child::after {
+        content: '';
+        display: block;
+        width: 200vw;
+        height: 1px;
+        background-color: #ccc;
+        margin-left: -100vw;
+        margin-top: 0.8rem;
+    }
+}
