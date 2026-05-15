@@ -147,7 +147,7 @@ header {
 
 /*===文字の高さ設定===*/
 .moji {
-        font-size: 97%;
+        font-size: 100%;
         height: 110px;
     }
 
@@ -346,7 +346,7 @@ img.area-background {
 }
 
 .shop-card__name p {
-    font-size: clamp(13px, 3.5vw, 20px);
+    font-size: clamp(13px, 4.5vw, 20px);
     color: #FFF;
     word-break: break-all;
     overflow-wrap: break-word;
@@ -365,7 +365,7 @@ img.area-background {
 }
 
 .shop-card__catchphrase p {
-    font-size: clamp(9px, 3vw, 14px);
+    font-size: clamp(9px, 5vw, 15px);
     width: 100%;
     word-break: break-all;
     overflow-wrap: break-word;
